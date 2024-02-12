@@ -1,3 +1,23 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript"
+    // "prettier" => disable prettier to keep the eslint working
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": "off",
+    "import/prefer-default-export": "off",
+    "max-len": ["error", 300],
+    "react/require-default-props": "off",
+    "linebreak-style": "off",
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 }
